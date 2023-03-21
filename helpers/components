@@ -1,0 +1,47 @@
+<!-- email s -->
+<div class="mb-4">
+    <div class="form-outline form-white">
+        <input type="text" id="form3Examplea9" class="form-control form-control-lg" />
+        <label class="form-label" for="form3Examplea9">Your Email</label>
+    </div>
+</div>
+
+<!-- email d -->
+
+
+  <!-- Selector dropdown's start -->
+  <div class="mb-4 pb-2" data-bs-theme="dark">
+    <select class="select">
+      <option value="1">Title</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+    </select>
+  </div>
+  <!-- Selector dropdown's end -->
+
+  <!-- dropdown's start -->
+<div class="mb-4 pb-2" data-bs-theme="dark">
+    <select class="select">
+      <option value="1">Position</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+    </select>
+  </div>
+  <!-- dropdown's end -->
+  
+
+  <div class="col col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+    <h1 class="display-4" style="color:grey-900">Welcome</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+        leap into electronic typesetting, remaining essentially unchanged.
+        <br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+        leap into electronic typesetting, remaining essentially unchanged.
+    </p>
+</div>

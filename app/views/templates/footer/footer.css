@@ -1,0 +1,32 @@
+.copytext{
+    font-style: italic !important;
+    color:rgb(173, 181, 189) !important;
+}
+
+.shooshcolorstatic{
+    text-decoration: none !important;
+    color:rgb(173, 181, 189) !important;
+}
+.shooshcolorstatich{
+    text-decoration: none !important;
+    color:rgb(173, 181, 189) !important;
+}
+
+.shooshcolor{
+    text-decoration: none !important;
+    color:rgb(173, 181, 189) !important;
+}
+
+.shooshcolor:hover{
+    text-decoration: none!important;
+    color:rgb(255, 255, 255)!important;
+}
+.shooshcolorlink{
+    text-decoration: none !important;
+    color:rgb(173, 181, 189) !important;
+}
+
+.shooshcolorlink:hover{
+    text-decoration: underline!important;
+    color:rgb(255, 255, 255)!important;
+}
