@@ -6,15 +6,17 @@ require realpath(__DIR__ . "/../../config/database.php");
 
 class User
 {
-    private $tableName = "users";
+    private static $tableName = "users";
     public static function getUsers()
     {
-        $users = DB::get("Select * from users");
+        $users = DB::query("Select * from users");
         return $users;
     }
 
     public static function insertUser($data)
     {
-        DB::insert(self::$tableName, $data);
+        $sql="INSERT INTO " . self::$tableName . " (name, email, activate_token) VALUES (.'$data[0].', '.$data[1].', '.$data[2].')";
+        var_export($sql);
+        return DB::query($sql);
     }
 }

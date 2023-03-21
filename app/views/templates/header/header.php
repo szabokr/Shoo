@@ -75,7 +75,7 @@
                         </div>
                         <div class="nav-item">
 
-                            <a href="/view/register/register.html">
+                            <a href="/app/views/templates/register/register.php">
                                 <button class="btn btn-success btn-md" style="color:rgb(173, 181, 189);"
                                     type="submit">Sign
                                     Up</button>
