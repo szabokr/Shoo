@@ -1,7 +1,7 @@
 <?php
 require realpath(__DIR__ . "/../models/User.php");
-// require realpath(__DIR__ . "/../models/user.php");
-
+require realpath(__DIR__ . "/../../config/mail.php");
+require realpath(__DIR__ . "/../helpers/Validation.php");
 
 class UserController
 {
@@ -10,13 +10,18 @@ class UserController
         return User::getUsers();
     }
 
-    public static function create($request)
+    public static function register($request)
     {
-        $data=[];
-        array_push($data, $request['firstName']. " " . $request['lastName']);
-        array_push($data, $request['email']);
-        array_push($data, uniqid());
-        User::insertUser($data);
-        return "Success";
+        $errors = Validation::validate(User::$roles, $request);
+        if ($errors) {
+            var_export(['success' => true, 'message' => $errors]);
+            return ['success' => false, 'message' => $errors];
+        }
+        EmailSender::sendEmail('recipient@example.com', 'Test email', 'Hello, world!');
+
+        $data = [];
+        array_push($data, $request['firstName'] . " " . $request['lastName'], $request['email'], uniqid());
+        User::saveUser($data);
+        return ['success' => true];
     }
 }

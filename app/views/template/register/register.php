@@ -73,22 +73,8 @@
       </div>
   </section>
   <!-- Register Page's End -->
-
   <?php
-    require realpath(__DIR__.'/../../../controllers/UserController.php' );
-if (isset($_POST['submit'])){
-    var_export($_POST);
-    UserController::create($_POST);
-    var_export(UserController::create($_POST));
-
-    header('Location: http://www.google.com/');
-}
-
-    function register()
-    {
-        if (isset($_POST['submit'])) {
-            // UserController::create($data);
-            echo '<script>alert("Welcome to Geeks for Geeks")</script>';
-        }
+    require realpath(__DIR__ . '/../../../controllers/UserController.php');
+    if (isset($_POST['submit'])) {
+        UserController::register($_POST);
     }
-    ?>

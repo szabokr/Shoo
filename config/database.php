@@ -3,8 +3,8 @@ class DB
 {
     private static $host = "localhost";
     private static $username = "root";
-    private static $password = "password";
-    private static $database = "shoosh";
+    private static $password = "Demo1234";
+    private static $database = "shooshdb";
 
     public static function query($sql)
     {
