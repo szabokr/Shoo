@@ -1,0 +1,75 @@
+.fcolor {
+    color: rgb(43, 48, 53) !important;
+  }
+  
+  .maingradientnouse {
+    background: rgb(209,209,209);
+    background: linear-gradient(180deg, rgba(209,209,209,1) 0%, rgba(255,255,255,1) 100%);
+  }
+  
+  .parallax-img{
+    /* background-image: url('resources/bg.jpg'); */
+    /* height: 80vh; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+  }
+  
+  .carditem, .iconhover{
+  
+    transition: all 0.2s ease;
+    cursor: pointer;
+    
+  
+  }
+  
+  .carditem:hover{
+  
+    transform: scale(1.019);
+  }
+  
+  .iconhover:hover{
+    transform: scale(1.1) rotate(10deg);
+    /* transform: rotate(10deg); */
+  }
+  
+  .naviconhover{
+    transition: width 300ms, height 300ms, background-color 300ms, transform 300ms;
+  
+  }
+  .naviconhover:hover{
+    transform: scale(1.2);
+    
+  }
+  
+  
+  
+  
+  .underline {
+    background: linear-gradient(0deg, #adb5bd, #adb5bd) no-repeat center bottom / 0 var(--bg-h);
+    transition: background-size 300ms;
+    transition-timing-function: ease-out;
+    /* --bg-h: 80%; */
+  }
+  .underline:where(:hover, :focus-visible,) {
+    background-size: 80% var(--bg-h);
+    /* background-position-x: center; */
+    /* transform: scale(1.025); */
+  }
+  
+  .underline {
+    padding-bottom: 2px;
+    --bg-h: 2px;
+  }
+  
+  .image{
+    opacity: 75%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  .image:hover{
+    opacity: 90%;
+    transform: scale(1.019);
+  }
+  

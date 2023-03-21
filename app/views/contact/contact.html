@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shoooooosh</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/css/bgimage.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <section>
+        <div>
+            <br>
+            <br>
+            <br>
+            <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-dark bg-dark fs-5"
+                data-bs-theme="dark">
+                <!-- <div class="container"> -->
+                <a class="navbar-brand ms-5" href="/index.html"><img src="/Resources/logo_v2.png" width="109px"
+                        height="60px"></a>
+                <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto ">
+                        <li class="nav-item text-uppercase underline text-center">
+                            <a class="nav-link" aria-current="page" href="index.html">News</a>
+                        </li>
+                        <li class="nav-item text-uppercase underline text-center">
+                            <a class="nav-link" href="#">Brands</a>
+                        </li>
+                        <li class="nav-item text-uppercase underline text-center">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item text-uppercase underline text-center">
+                            <a class="nav-link" href="/view/partners/partners.html">Partners</a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav-link d-flex my-1 me-0 me-lg-4 justify-content-center">
+                        <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-facebook"
+                                    style="color:rgb(173, 181, 189)"></i></a>
+                        </li class="nav-link naviconhover mx-2">
+                        <li class="nav-link naviconhover mx-2"> <a href="#"><i class="bi bi-twitter "
+                                    style="color:rgb(173, 181, 189)"></i></i></a></li>
+                        <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-instagram "
+                                    style="color:rgb(173, 181, 189)"></i></i></i></a></li>
+                        <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-youtube "
+                                    style="color:rgb(173, 181, 189)"></i></i></a></li>
+                        <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-google "
+                                    style="color:rgb(173, 181, 189)"></i></i></a></li>
+                        <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-github "
+                                    style="color:rgb(173, 181, 189)"></i></i></a></li>
+                    </ul>
+
+                    <div class="
+                    d-lg-inline-flex 
+                    text-center 
+                    align-items-center
+                  my-4 my-lg-0 me-lg-5
+                    ">
+                        <div class="nav-item mb-4 mb-lg-0 me-lg-2">
+
+                            <a href="/view/login/login.html">
+                                <button class="btn btn-outline-secondary btn-md" style="color:rgb(173, 181, 189);"
+                                    type="submit">Login</button>
+                            </a>
+
+                        </div>
+                        <div class="nav-item">
+
+                            <a href="/view/register/register.html">
+                                <button class="btn btn-success btn-md" style="color:rgb(173, 181, 189);"
+                                    type="submit">Sign
+                                    Up</button>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- </div> -->
+            </nav>
+        </div>
+    </section>
+    <!-- Navigation bar end -->
+
+    <!-- Contact Page's Start -->
+    <div class="container w-75 bg-light border border-1 rounded border-opacity-75 shadow my-5 ease">
+        <div class="row text-center">
+            <h1 class="display-6 text-uppercase fs-3 pt-3">Have some questions?</h1>
+            <p class="fs-6">If you have any question or remark, please let us know!</p>
+        </div>
+
+        <div class="row align-items-center mx-5 justify-content-center">
+
+            <div class="col-12 col-lg-6 text-center my-4 my-lg-0 imagesize align-self-lg-center pb-lg-5">
+                <img src="letter.png" class="img-fluid w-75 py-0 pe-lg-5" alt="contact us">
+            </div>
+
+            <div class="col-12 col-lg-6 text-center my-3">
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                    <div class="form-outline mb-4 text-start">
+                        <label class="" for="pwd"><i class="bi bi-person-fill mx-1"></i>Name</label>
+                        <input type="name" id="name" name="name" class="form-control form-control-md"
+                            pattern="[A-Za-z]{3,15}" placeholder="John" required />
+                    </div>
+
+                    <div class="form-outline mb-4 text-start">
+                        <label class="" for="email"><i class="bi bi-envelope-at-fill mx-1"></i>E-mail</label>
+                        <input type="email" id="email" name="email"
+                            pattern="([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9]))"
+                            class="form-control form-control-md mb-4" placeholder="example@email.com" required />
+                    </div>
+
+                    <div class="form-outline mb-4 text-start">
+                        <label class="" for="message"><i class="bi bi-envelope-fill mx-1"></i>Your message</label>
+                        <textarea type="text" id="message" name="message" rows="5" class="form-control md-textarea"
+                            placeholder="Type your problem here!"></textarea>
+                    </div>
+
+                    <div class="btn btn-outline-success btn-md mt-3 mb-4">Submit!</div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Contact Page's End -->
+
+    <!-- Footer's start -->
+    <footer class="bg-dark text-center text-light opacity fs-5">
+        <!-- Grid container -->
+        <div class="container">
+            <!-- Section: Social media -->
+            <section class="mb-4 border-bottom">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating my-3 mx-2" style="color:rgb(173, 181, 189)" href="#!"><i
+                        class="bi bi-facebook"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating my-3 mx-2" style="color:rgb(173, 181, 189)" href="#!"
+                    role="button"><i class="bi bi-twitter "></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating my-3 mx-2" style="color:rgb(173, 181, 189)" href="#!"
+                    role="button"><i class="bi bi-instagram"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating my-3 mx-2" style="color:rgb(173, 181, 189)" href="#!"
+                    role="button"><i class="bi bi-youtube"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating my-3 mx-2" style="color:rgb(173, 181, 189)" href="#!"
+                    role="button"><i class="bi bi-google"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating my-3 mx-2" style="color:rgb(173, 181, 189)" href="#!"
+                    role="button"><i class="bi bi-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+
+
+
+            <!-- Section: Text -->
+            <section class="mb-4 shooshcolorstatic">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="my-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase shooshcolorstatich">costumer care</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="shooshcolor">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor">Terms of service</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor">Privacy policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase shooshcolorstatich">Help</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="shooshcolor">Seller's guide</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor">About us</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor"></a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase shooshcolorstatich">My account</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="shooshcolor">Sign In</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor">Register</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor">My shoes</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="shooshcolor">My oders</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 shooshcolorstatic" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-light shooshcolorlink" href="#">shoosh.com</a>
+            All Rights Reserved.
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer's end -->
+
+    <!-- Bootstrap's Script's Start -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+    <!-- Bootstrap's Script's End -->
+
+    <!-- Password Validation's Start -->
+    <script>
+        var password = document.getElementById("pwd")
+            , confirm_password = document.getElementById("confirm_pwd");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+    <!-- Password Validation's End -->
+
+
+</body>
+
+</html>
