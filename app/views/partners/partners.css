@@ -1,0 +1,26 @@
+.bootstrap{
+    border-color: rgb(83, 32, 182);
+    color: rgb(111, 44, 243);
+}
+.bootstrap:hover{
+    border-color: rgb(83, 32, 182);
+    background-color: rgb(111, 44, 244);
+}
+
+.htmlbtn{
+    border-color: rgb(228, 77, 38);
+    color: rgb(241, 101, 41);
+}
+.htmlbtn:hover{
+    border-color: rgb(228, 77, 38);
+    background-color: rgb(241, 101, 41);
+}
+
+.jsbtn{
+    border-color: rgb(233, 201, 48);
+    color: rgb(254, 221, 34);
+}
+.jsbtn:hover{
+    border-color: rgb(233, 201, 48);
+    background-color: rgb(254, 221, 34);
+}
