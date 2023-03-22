@@ -17,7 +17,8 @@ class UserController
             var_export(['success' => true, 'message' => $errors]);
             return ['success' => false, 'message' => $errors];
         }
-        EmailSender::sendEmail('recipient@example.com', 'Test email', 'Hello, world!');
+        $templateData = ['to' => $request['email']];
+        EmailSender::sendEmail("user_registration", $templateData);
 
         $data = [];
         array_push($data, $request['firstName'] . " " . $request['lastName'], $request['email'], uniqid());
