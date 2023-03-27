@@ -1,321 +1,95 @@
-    <!-- Seller Page's Start -->
-    <section>
-        <div class="container my-5">
-            <div class="row">
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+<br>
+<br>
+<br>
+<br>
+   <?php
+    include('./app/controllers/ShoeController.php');
+  
+    $shoes = ShoeController::list();
+    
+    echo '<section>';
+    echo '<div class="container my-5">';
+    $index = 0;
+    foreach ($shoes as $value) {
+        var_export ($value["count"]);
+        var_export ($shoes);
 
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+        if ($index % 4 == 0) {
+            echo '<div class="row">';
+        }
 
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+        $shoename = $value["name"] . " " . $value["type"];
 
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                echo '<div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">';
+                    echo '<div class="card carditem shadow cardwidth">';
+                    echo '<img src=" ' . $value["picture_path"] . ' " class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">';
+                        echo '<div class="card-body">';
+                            echo '<h5 class="card-title">' . $shoename . '</h5>';
+                            echo '<p class="card-text">$' . $value["price"] . '</p>';
+                            echo '<button class="btn btn-outline-success">Add to cart</button>';
+                        echo '</div>';
+                    echo '</div>';
+                echo '</div>';
 
-            <div class="row">
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+        if ($index % 4 == 0 && (int)($value["count"])==$index) {
+            echo '</div>';
+        }
+        echo $index;
+        $index++;
+    }
 
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+    echo '</div>';
+echo'</section>';
+    ?>
 
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+   <!-- Seller Page's Start -->
+   <!-- <section>
+       <div class="container my-5">
+           <div class="row">
+               <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
+                   <div class="card carditem shadow cardwidth">
+                       <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
+                       <div class="card-body">
+                           <h5 class="card-title"></h5>
+                           <p class="card-text">$price</p>
+                           <button class="btn btn-outline-success">Add to cart</button>
+                       </div>
+                   </div>
+               </div>
 
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+               <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
+                   <div class="card carditem shadow cardwidth">
+                       <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
+                       <div class="card-body">
+                           <h5 class="card-title">$shoename</h5>
+                           <p class="card-text">$price</p>
+                           <button class="btn btn-outline-success">Add to cart</button>
+                       </div>
+                   </div>
+               </div>
 
-            <div class="row">
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+               <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
+                   <div class="card carditem shadow cardwidth">
+                       <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
+                       <div class="card-body">
+                           <h5 class="card-title">$shoename</h5>
+                           <p class="card-text">$price</p>
+                           <button class="btn btn-outline-success">Add to cart</button>
+                       </div>
+                   </div>
+               </div>
 
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                    <div class="card carditem shadow cardwidth">
-                        <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth"
-                            alt="an image of a shoe">
-                        <div class="card-body">
-                            <h5 class="card-title">$shoename</h5>
-                            <p class="card-text">$price</p>
-                            <button class="btn btn-outline-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mb-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center opacity-75">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </section>
-    <!-- Seller Page's End -->
+               <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
+                   <div class="card carditem shadow cardwidth">
+                       <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
+                       <div class="card-body">
+                           <h5 class="card-title">$shoename</h5>
+                           <p class="card-text">$price</p>
+                           <button class="btn btn-outline-success">Add to cart</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section> -->
+   <!-- Seller Page's End -->
