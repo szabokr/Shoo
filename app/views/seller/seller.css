@@ -1,8 +1,17 @@
-.seller{
-    border-color: rgb(83, 32, 182);
-    color: rgb(111, 44, 243);
+.seller {
+  border-color: rgb(83, 32, 182);
+  color: rgb(111, 44, 243);
 }
-.seller:hover{
-    border-color: rgb(83, 32, 182);
-    background-color: rgb(111, 44, 244);
+.seller:hover {
+  border-color: rgb(83, 32, 182);
+  background-color: rgb(111, 44, 244);
+}
+
+.cardwidth {
+  width: 15rem;
+}
+
+.cardimgwidth {
+  width: 14.9em;
+  height: 12em;
 }
