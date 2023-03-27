@@ -11,11 +11,11 @@
         if (($index-1) % 4 == 0) {
             echo '<div class="row">';
         }
-        $shoename = $value["name"] . " " . $value["type"];
+        $shoename = $value["brand"] . " " . $value["type"];
 
                 echo '<div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">';
                     echo '<div class="card carditem shadow cardwidth">';
-                    echo '<img src=" ' . $value["picture_path"] . ' " class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">';
+                    echo '<img src=" ' . $value["picture"] . ' " class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">';
                         echo '<div class="card-body">';
                             echo '<h5 class="card-title">' . $shoename . '</h5>';
                             echo '<p class="card-text">$' . $value["price"] . '</p>';

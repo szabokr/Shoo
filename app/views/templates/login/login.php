@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center needs-validation">
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                        <div class="card opacity shadow" style="border-radius: 15px;">
+                        <div class="card shadow bg-light border border-1 rounded border-opacity-75 shadow my-5 text-muted loginCard">
                             <div class="card-body p-5">
                                 <h2 class="text-uppercase text-center mb-5 display-6 text-muted">Sign In</h2>
                                 <form action="../app/controllers/UserController.php" method="post">
@@ -38,7 +38,7 @@
 
                                     <div class="d-grid gap-2">
                                         <button type="submit"
-                                            class="btn btn-outline-secondary btn-block btn-lg gradient-custom-4">&nbsp;&nbsp;Login&nbsp;&nbsp;</button>
+                                            class="btn btn-outline-success btn-block btn-lg gradient-custom-4">&nbsp;&nbsp;Login&nbsp;&nbsp;</button>
                                     </div>
 
 

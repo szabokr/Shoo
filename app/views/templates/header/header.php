@@ -7,25 +7,24 @@
     <title>Shoooooosh</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="app/views/templates/header/header.css" />
     <link rel="stylesheet" href="app/views/templates/footer/footer.css" />
+    <link rel="stylesheet" href="app/views/templates/register/register.css" />
     <link rel="stylesheet" href="app/views/landing_page/landingPage.css" />
     <link rel="stylesheet" href="app/views/partners/partners.css" />
     <link rel="stylesheet" href="app/views/seller/seller.css" />
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-euV7ZnwrFpfCg7Ej6Qdqf0yq3Fy0a6wjhgUfRkY7VhU0I/Z8A7KehiLfBTVyVwRu" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-tSazlPT9oKj+vOGHwxWVT+n1g4LzzIjy1CrCpK5xKM8Gv5z9Q5I5n5P5W5n5Un5+" crossorigin="anonymous"></script>
-
+    
 </head>
 
 <body>
     <!-- Navbar's Start -->
     <section>
         <br><br><br>
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-dark bg-dark fs-5" data-bs-theme="dark">
+        <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary navbar-dark bg-dark fs-5" data-bs-theme="dark">
             <a class="navbar-brand ms-5" href="index.php"><img class="shooshlogo" src="images/commonImages/logo_v2.png"></a>
             <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,8 +59,8 @@
 
                 </ul>
 
-                <div class="d-lg-inline-flex text-center align-items-center my-4 my-lg-0 me-lg-5">
-                    <div class="nav-item mb-4 mb-lg-0 me-lg-2">
+                <div class="d-xl-inline-flex text-center align-items-center my-4 my-xl-0 me-xl-5">
+                    <div class="nav-item mb-4 mb-xl-0 me-xl-2">
                         <a href="login.php">
                             <button class="btn btn-outline-secondary btn-md shooshcolor" type="submit">Login</button>
                         </a>
@@ -75,5 +74,8 @@
                 </div>
             </div>
         </nav>
+
+      
+
     </section>
     <!-- Navbar's End -->

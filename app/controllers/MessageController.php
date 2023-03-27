@@ -18,7 +18,7 @@ class MessageController
         array_push($data, $request['message']);
         array_push($data, date("Y-m-d H:i:s"));
         Message::insertMessage($data);
-        var_export($data);        
+        // var_export($data);        
         return "Success";
     }
 }
