@@ -1,7 +1,3 @@
-<br>
-<br>
-<br>
-<br>
    <?php
     include('./app/controllers/ShoeController.php');
   
@@ -9,15 +5,12 @@
     
     echo '<section>';
     echo '<div class="container my-5">';
-    $index = 0;
+    $index = 1;
     foreach ($shoes as $value) {
-        var_export ($value["count"]);
-        var_export ($shoes);
-
-        if ($index % 4 == 0) {
+    
+        if (($index-1) % 4 == 0) {
             echo '<div class="row">';
         }
-
         $shoename = $value["name"] . " " . $value["type"];
 
                 echo '<div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">';
@@ -31,10 +24,9 @@
                     echo '</div>';
                 echo '</div>';
 
-        if ($index % 4 == 0 && (int)($value["count"])==$index) {
+        if ($index % 4 == 0) {
             echo '</div>';
         }
-        echo $index;
         $index++;
     }
 

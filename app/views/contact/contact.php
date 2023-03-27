@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="col-12 col-lg-6 text-center my-3">
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <form id="contact-form" name="contact-form" action="contact.php" method="POST">
                         <div class="form-outline mb-4 text-start">
                             <label class="" for="pwd"><i class="bi bi-person-fill mx-1"></i>Name</label>
                             <input type="name" id="name" name="name" class="form-control form-control-md"
@@ -32,10 +32,27 @@
                                 placeholder="Type your problem here!"></textarea>
                         </div>
 
-                        <button class="btn btn-outline-success btn-md mt-3 mb-4">Submit!</button>
+                        <button for="submit" value="1" name="submit" class="btn btn-outline-success btn-block btn-lg gradient-custom-4">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
     <!-- Contact Page's End -->
+
+    <?php
+    require realpath(__DIR__ . '../../../controllers/MessageController.php');
+    if (isset($_POST['submit'])) {
+        MessageController::create($_POST);
+        // modal template hogy sikeres vagy nem sikeres a reg
+
+    }
+
+    function register()
+    {
+        if (isset($_POST['submit'])) {
+            // UserController::create($data);
+            echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+        }
+    }
+    ?>

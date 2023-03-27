@@ -2,7 +2,6 @@
 require realpath(__DIR__ . "/../models/User.php");
 // require realpath(__DIR__ . "/../models/user.php");
 
-
 class UserController
 {
     public static function list()

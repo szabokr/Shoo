@@ -1,19 +1,13 @@
 <?php
-require realpath(__DIR__ . "/../models/shoe_types.php");
-// require realpath(__DIR__ . "/../models/brands.php");
+require realpath(__DIR__ . "/../models/brands.php");
 // require realpath(__DIR__ . "/../models/user.php");
 
 
-class ShoeController
+class BrandController
 {
     public static function list()
     {
-        return ShoeType::getShoes();
-    }
-
-    public static function listBrands()
-    {
-        return ShoeType::getBrands();
+        return Brands::getBrands();
     }
 
     // public static function create($request)
