@@ -1,0 +1,36 @@
+.carditem,
+.iconhover {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.carditem:hover {
+  transform: scale(1.019);
+}
+
+.iconhover:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.image {
+  opacity: 75%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.image:hover {
+  opacity: 90%;
+  transform: scale(1.019);
+}
+
+.bannericon {
+  font-size: 3.5rem;
+}
+
+.newslettericon {
+  font-size: 5.5rem;
+}
+
+.newsletterformicon {
+  font-size: 2rem;
+}
