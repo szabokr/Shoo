@@ -1,28 +1,28 @@
    <?php
     include('./app/controllers/ShoeController.php');
-  
+
     $shoes = ShoeController::list();
-    
+
     echo '<section>';
     echo '<div class="container my-5">';
     $index = 1;
     foreach ($shoes as $value) {
-    
-        if (($index-1) % 4 == 0) {
+
+        if (($index - 1) % 4 == 0) {
             echo '<div class="row">';
         }
         $shoename = $value["brand"] . " " . $value["type"];
 
-                echo '<div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">';
-                    echo '<div class="card carditem shadow cardwidth">';
-                    echo '<img src=" ' . $value["picture"] . ' " class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">';
-                        echo '<div class="card-body">';
-                            echo '<h5 class="card-title">' . $shoename . '</h5>';
-                            echo '<p class="card-text">$' . $value["price"] . '</p>';
-                            echo '<button class="btn btn-outline-success">Add to cart</button>';
-                        echo '</div>';
-                    echo '</div>';
-                echo '</div>';
+        echo '<div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">';
+        echo '<div class="card carditem shadow cardwidth">';
+        echo '<img src=" ' . $value["picture"] . ' " class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">';
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">' . $shoename . '</h5>';
+        echo '<p class="card-text">$' . $value["price"] . '</p>';
+        echo '<button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
 
         if ($index % 4 == 0) {
             echo '</div>';
@@ -31,7 +31,7 @@
     }
 
     echo '</div>';
-echo'</section>';
+    echo '</section>';
     ?>
 
    <!-- Seller Page's Start -->

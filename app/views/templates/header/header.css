@@ -1,5 +1,6 @@
 .naviconhover {
-  transition: width 300ms, height 300ms, background-color 300ms, transform 300ms ease !important;
+  transition: width 300ms, height 300ms, background-color 300ms,
+    transform 300ms ease !important;
 }
 
 .naviconhover:hover {
@@ -23,6 +24,25 @@
   height: 60px !important;
 }
 
-.profilebtn{
+.profilebtn {
   font-size: 2.5rem;
+}
+
+.navProfileIco {
+  transition: width 300ms, height 300ms, background-color 300ms,
+    transform 300ms ease !important;
+}
+
+.deliveryIcons {
+  width: 34px !important;
+  height: 20px !important;
+}
+
+.cartIconHover {
+  transition: width 100ms, height 100ms, background-color 100ms,
+    transform 100ms ease !important;
+}
+
+.cartIconHover:hover{
+  transform: scale(1.1) !important;
 }

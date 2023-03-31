@@ -34,3 +34,14 @@
 .newsletterformicon {
   font-size: 2rem;
 }
+
+.landingPageCarousel {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.welcomeIcon{
+  font-size: 5rem;
+}
