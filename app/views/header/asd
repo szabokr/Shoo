@@ -1,0 +1,70 @@
+
+    <section>
+        <br><br><br>
+        <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary navbar-dark bg-dark fs-5" data-bs-theme="dark">
+            <a class="navbar-brand ms-5" href="index.php"><img class="shooshlogo" src="images/commonImages/logo_v2.png"></a>
+            <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item text-uppercase underline text-center">
+                        <a class="nav-link" href="index.php">Home</a>
+                    </li>
+
+                    <li class="nav-item text-uppercase underline text-center">
+                        <a class="nav-link" href="seller.php">Offers</a>
+                    </li>
+
+                    <li class="nav-item text-uppercase underline text-center">
+                        <a class="nav-link" href="contact.php">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item text-uppercase underline text-center">
+                        <a class="nav-link" href="partners.php">Partners</a>
+                    </li>
+                </ul>
+
+                <ul class="nav-link d-flex my-1 me-0  justify-content-center align-items-center">
+                    <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-facebook shooshcolor"></i></a></li>
+                    <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-twitter shooshcolor"></i></a></li>
+                    <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-instagram shooshcolor"></i></a></li>
+                    <li class="nav-link naviconhover mx-2"><a href="#"><i class="bi bi-google shooshcolor"></i></a></li>
+
+                    <li class="nav-link mx-2 mx-xl-0 ms-xl-5 navProfileIco"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-bag-check-fill shooshcolor"></i></a></li>
+                    <li class="nav-link ">
+                        <div class="dropdown mx-2">
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle text-muted" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="nav-link navProfileIco"><i class="bi bi-person-circle shooshcolor"></i></div>
+                                <!-- <span class="d-none d-xl-inline text-muted fs-5 mx-1">ide jonne a neved de nemkell</span> -->
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow mt-1">
+                                <li><a class="dropdown-item" href="profilePage.php">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+                <div class="d-xl-inline-flex text-center align-items-center my-4 my-xl-0 me-xl-5">
+                    <div class="nav-item mb-4 mb-xl-0 me-xl-2">
+                        <a href="login.php">
+                            <button class="btn btn-outline-secondary btn-md shooshcolor" type="submit">Login</button>
+                        </a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="register.php">
+                            <button class="btn btn-success btn-md" type="submit">SignUp</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+    </section>

@@ -8,7 +8,7 @@
                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
            </div>
            <div class="carousel-inner">
-               <div class="carousel-item active" data-bs-interval="20000">
+               <div class="carousel-item active" data-bs-interval="5000">
                    <img src="images/commonImages/carousel4.jpg" class="img-fluid landingPageCarousel" alt="nikestore image">
                    <div class="carousel-caption fs-5">
                        <h5 class="display-6 text-light text-uppercase fw-bold">join our team!</h5>
@@ -17,7 +17,7 @@
                        <button class="btn btn-outline-light btn-md fw-bold text-uppercase" type="submit">Register</button>
                    </div>
                </div>
-               <div class="carousel-item" data-bs-interval="10000">
+               <div class="carousel-item" data-bs-interval="5000">
                    <img src="images/commonImages/carousel1.jpg" class="img-fluid landingPageCarousel" alt="...">
                    <div class="carousel-caption fs-5">
                        <h5 class="display-6 text-light text-uppercase fw-bold">find our best offers!</h5>
@@ -26,7 +26,7 @@
                        <button class="btn btn-outline-light btn-md fw-bold text-uppercase" type="submit">Offers</button>
                    </div>
                </div>
-               <div class="carousel-item" data-bs-interval="10000">
+               <div class="carousel-item" data-bs-interval="5000">
                    <img src="images/commonImages/shoewall.jpg" class="img-fluid landingPageCarousel" alt="...">
                    <div class="carousel-caption fs-5">
                        <h5 class="display-6 text-dark text-uppercase fw-bold">subscribe to our newsletter</h5>
@@ -134,52 +134,19 @@
                <div class="row">
                    <h1 class="display-6 text-uppercase text-center text-muted fs-3 py-3">Our best sellers:</h1>
                </div>
+               <?php
+                include('./app/controllers/ShoeController.php');
+                $shoes = ShoeController::list();
 
-               <div class="row">
-                   <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                       <div class="card carditem shadow cardwidth">
-                           <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
-                           <div class="card-body">
-                               <h5 class="card-title">$shoename</h5>
-                               <p class="card-text">$price</p>
-                               <button class="btn btn-outline-success">Add to cart</button>
-                           </div>
-                       </div>
-                   </div>
+                $index = 1;
+                foreach ($shoes as $value) {
 
-                   <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                       <div class="card carditem shadow cardwidth">
-                           <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
-                           <div class="card-body">
-                               <h5 class="card-title">$shoename</h5>
-                               <p class="card-text">$price</p>
-                               <button class="btn btn-outline-success">Add to cart</button>
-                           </div>
-                       </div>
-                   </div>
-
-                   <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                       <div class="card carditem shadow cardwidth">
-                           <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
-                           <div class="card-body">
-                               <h5 class="card-title">$shoename</h5>
-                               <p class="card-text">$price</p>
-                               <button class="btn btn-outline-success">Add to cart</button>
-                           </div>
-                       </div>
-                   </div>
-
-                   <div class="col col-md-6 col-xl-3 text-center pb-5 d-flex justify-content-center">
-                       <div class="card carditem shadow cardwidth">
-                           <img src="..." class="object-fit-cover border rounded card-img-tp cardimgwidth" alt="an image of a shoe">
-                           <div class="card-body">
-                               <h5 class="card-title">$shoename</h5>
-                               <p class="card-text">$price</p>
-                               <button class="btn btn-outline-success">Add to cart</button>
-                           </div>
-                       </div>
-                   </div>
-               </div>
+                    if ($index < 5) {
+                        include('shoecard.tpl.php');
+                    }
+                    $index++;
+                }
+                ?>
 
            </div>
        </section>
@@ -264,4 +231,3 @@
        </section>
        <!-- Newsletter's End -->
    </section>
-   <!-- Landing Page's End -->

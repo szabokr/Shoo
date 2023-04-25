@@ -39,7 +39,7 @@
                </div>
 
                <div class="col-12 col-lg-6 text-center my-3">
-                   <form id="contact-form" name="contact-form" action="contact.php" method="POST">
+                   <form id="contact-form" name="contact-form" action="?contact" method="POST">
                        <div class="form-outline mb-4 text-start">
                            <label class="" for="pwd"><i class="bi bi-person-fill mx-1"></i>Name</label>
                            <input type="name" id="name" name="name" class="form-control form-control-md" placeholder="John" required />
@@ -70,12 +70,3 @@
         // modal template hogy sikeres vagy nem sikeres a reg
 
     }
-
-    function register()
-    {
-        if (isset($_POST['submit'])) {
-            // UserController::create($data);
-            echo '<script>alert("Welcome to Geeks for Geeks")</script>';
-        }
-    }
-    ?>

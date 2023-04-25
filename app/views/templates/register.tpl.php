@@ -8,7 +8,7 @@
                          <div class="card-body p-5">
                              <h2 class="text-uppercase text-center mb-5 display-6 text-muted">Create an account</h2>
 
-                             <form action="index.php" method="POST">
+                             <form action="?register" method="POST">
                                  <div class="row">
                                      <div class="col">
                                          <div class="form-outline mb-4">
@@ -23,20 +23,20 @@
                                          </div>
                                      </div>
                                  </div>
-                              <div class="row">
-                              <div class="col">
+                                 <div class="row">
+                                     <div class="col">
                                          <div class="form-outline mb-4">
                                              <label class="" for="email"><i class="bi bi-envelope-at-fill mx-1"></i>E-mail<span class="requiredInput">*</span></label>
                                              <input type="email" id="email" name="email" class="form-control form-control-md" placeholder="example@email.com" required />
                                          </div>
                                      </div>
-                              </div>
+                                 </div>
                                  <div class="row border-bottom pb-3">
-                                    
+
                                      <div class="col">
                                          <div class="form-outline mb-4">
-                                             <label class="" for="phoneNumber"><i class="bi bi-phone-fill mx-1"></i>Number<span class="requiredInput">*</span></label>
-                                             <input type="text" id="phoneNumber" name="phoneNumber" class="form-control form-control-md" placeholder="+36 (XX) XXX-XXXX" required />
+                                             <label class="" for="phone_number"><i class="bi bi-phone-fill mx-1"></i>Number<span class="requiredInput">*</span></label>
+                                             <input type="text" id="phone_number" name="phone_number" class="form-control form-control-md" placeholder="+36 (XX) XXX-XXXX" required />
                                          </div>
                                      </div>
                                  </div>
@@ -44,8 +44,8 @@
                                  <div class="row pt-4 justify-content-center">
                                      <div class="col-12 col-md-10 col-lg-10">
                                          <div class="form-outline mb-4">
-                                             <label class="" for="lastName"><i class="bi bi-cursor-fill mx-1"></i>ZIP Code<span class="requiredInput">*</span></label>
-                                             <input type="text" id="lastName" name="lastName" class="form-control form-control-md" placeholder="1234" required />
+                                             <label class="" for="zip_code"><i class="bi bi-cursor-fill mx-1"></i>ZIP Code<span class="requiredInput">*</span></label>
+                                             <input type="text" id="zip_code" name="zip_code" class="form-control form-control-md" placeholder="1234" required />
                                          </div>
                                      </div>
                                  </div>
@@ -71,8 +71,8 @@
                                  <div class="row justify-content-center">
                                      <div class="col-12 col-md-10 col-lg-10">
                                          <div class="form-outline mb-4">
-                                             <label class="" for="houseNumber"><i class="bi bi-house-fill mx-1"></i>House Number<span class="requiredInput">*</span></label>
-                                             <input type="text" id="houseNumber" name="houseNumber" class="form-control form-control-md" placeholder="101" required />
+                                             <label class="" for="house_number"><i class="bi bi-house-fill mx-1"></i>House Number<span class="requiredInput">*</span></label>
+                                             <input type="text" id="house_number" name="house_number" class="form-control form-control-md" placeholder="101" required />
                                          </div>
                                      </div>
                                  </div>
@@ -88,7 +88,7 @@
                                  </div>
 
                                  <div class="d-grid gap-2">
-                                     <button for="submit" value="1" name="submit" class="btn btn-outline-success btn-block btn-lg gradient-custom-4">Register</button>
+                                     <button for="submit" value="1" name="submit" id="liveToastBtn" class="btn btn-outline-success btn-block btn-lg gradient-custom-4">Register</button>
                                  </div>
 
                                  <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="../login/index.php" class="text-body"><u>Login here</u></a></p>
@@ -104,8 +104,9 @@
  </section>
  <!-- Register Page's End -->
  <?php
-    require realpath(__DIR__ . '/../../../controllers/UserController.php');
+    require realpath(__DIR__ . '/../../controllers/UserController.php');
     if (isset($_POST['submit'])) {
-        UserController::create($_POST);
+        $response= UserController::create($_POST);
+        include('toaster.tpl.php');
     }
     ?>

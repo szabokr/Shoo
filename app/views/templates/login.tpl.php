@@ -7,7 +7,7 @@
                         <div class="card shadow bg-light border border-1 rounded border-opacity-75 shadow my-5 text-muted loginCard">
                             <div class="card-body p-5">
                                 <h2 class="text-uppercase text-center mb-5 display-6 text-muted">Sign In</h2>
-                                <form action="../app/controllers/UserController.php" method="post">
+                                <form action="?login" method="post">
                                     <div class="form-outline mb-4">
                                         <label class="" for="email"><i
                                                 class="bi bi-envelope-at-fill mx-1"></i>E-mail</label>
@@ -37,9 +37,8 @@
 
 
                                     <div class="d-grid gap-2">
-                                        <button type="submit"
-                                            class="btn btn-outline-success btn-block btn-lg gradient-custom-4">&nbsp;&nbsp;Login&nbsp;&nbsp;</button>
-                                    </div>
+                                     <button for="submit" value="1" name="submit" id="liveToastBtn" class="btn btn-outline-success btn-block btn-lg gradient-custom-4">Login</button>
+                                 </div>
 
 
 
@@ -56,4 +55,10 @@
             </div>
         </div>
     </section>
-    <!-- Login Page's End -->
+     <?php
+    require realpath(__DIR__ . '/../../controllers/UserController.php');
+    if (isset($_POST['submit'])) {
+        $response= UserController::login($_POST);
+        include('toaster.tpl.php');
+    }
+    ?>
