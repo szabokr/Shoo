@@ -1,0 +1,105 @@
+.naviconhover {
+  transition: width 300ms, height 300ms, background-color 300ms,
+    transform 300ms ease !important;
+}
+
+.naviconhover:hover {
+  transform: scale(1.2) !important;
+}
+
+.underline {
+  background: linear-gradient(0deg, #adb5bd, #adb5bd) no-repeat center bottom /
+    0 var(--bg-h) !important;
+  transition: background-size 300ms !important;
+  transition-timing-function: ease-out !important;
+  padding-bottom: 2px !important;
+  --bg-h: 2px !important;
+}
+.underline:where(:hover, :focus-visible, ) {
+  background-size: 80% var(--bg-h) !important;
+}
+
+
+.shooshlogo {
+  width: 109px !important;
+  height: 60px !important;
+}
+
+.profilebtn {
+  font-size: 2.5rem;
+}
+
+.navProfileIco {
+  transition: width 300ms, height 300ms, background-color 300ms,
+    transform 300ms ease !important;
+}
+
+.deliveryIcons {
+  width: 34px !important;
+  height: 20px !important;
+}
+
+.cartIconHover {
+  transition: width 100ms, height 100ms, background-color 100ms,
+    transform 100ms ease !important;
+}
+
+.cartIconHover:hover {
+  transform: scale(1.1) !important;
+}
+
+.cardBorder {
+  border-radius: 15px;
+}
+
+.shooshcolorstatic {
+  text-decoration: none !important;
+  color: rgb(173, 181, 189) !important;
+}
+
+.shooshcolor {
+  text-decoration: none !important;
+  color: rgb(173, 181, 189) !important;
+}
+
+.shooshcolor:hover {
+  text-decoration: none !important;
+  color: rgb(255, 255, 255) !important;
+}
+.shooshcolorlink {
+  text-decoration: none !important;
+  color: rgb(173, 181, 189) !important;
+}
+
+.shooshcolorlink:hover {
+  text-decoration: underline !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.footeropacity {
+  opacity: 0.9;
+}
+
+.copyrightbg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footericonhover {
+  transition: width 300ms, height 300ms, background-color 300ms, transform 300ms;
+}
+
+.footericonhover:hover {
+  transform: scale(1.15);
+}
+
+.footerunderline {
+  background: linear-gradient(0deg, #adb5bd, #adb5bd) no-repeat center bottom /
+    0 var(--bg-h);
+  transition: background-size 300ms;
+  transition-timing-function: ease-out;
+  padding-bottom: 2px;
+  --bg-h: 2px;
+}
+.footerunderline:where(:hover, :focus-visible, ) {
+  background-size: 100% var(--bg-h);
+}

@@ -1,0 +1,18 @@
+.pt-3-half {
+    padding-top: 1.4rem;
+  }
+
+  .dashboardAdd:hover{
+    transform: scale(1.03);
+    animation: ease-in;
+    transition: 150ms;
+
+  }
+  
+  .dashboardIconSize{
+    font-size: 2.3rem;
+  }
+
+  .activelink{
+    color: white;
+  }

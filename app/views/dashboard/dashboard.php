@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../landing_page/landingPage.css" />
     <link rel="stylesheet" href="..//partners/partners.css" />
     <link rel="stylesheet" href="../seller/seller.css" />
+    <link rel="stylesheet" href="dashboard.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-euV7ZnwrFpfCg7Ej6Qdqf0yq3Fy0a6wjhgUfRkY7VhU0I/Z8A7KehiLfBTVyVwRu" crossorigin="anonymous"></script>
@@ -25,12 +26,15 @@
 
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark footeropacity">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+            <div class="col-auto col-md-3 col-xl-2 bg-dark footeropacity">
+                <!-- <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"> -->
+                <div class="min-vh-100 d-flex flex-column align-items-center align-items-sm-start">
                     <div class="d-flex align-items-center pb-2 mb-md-0 me-md-auto text-decoration-none border-bottom w-100">
-                        <h1 class="fs-4 display-6 d-none d-sm-inline text-uppercase mt-0 mt-sm-3 shooshcolorstatic">Dashboard</h1>
+                        <h1 class="fs-4 display-6 d-none d-sm-inline text-uppercase mt-0 mt-sm-3 text-white text-decoration-none">
+                            Dashboard
+                        </h1>
                     </div>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start pt-2" id="menu">
                         <li>
                             <a href="#" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi bi-envelope-at shooshcolor"></i> <span class="ms-1 d-none d-sm-inline shooshcolor">Messages</span></a>
@@ -51,14 +55,16 @@
 
                     </ul>
                     <hr>
-                    <div class="dropdown pb-4">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">loser</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
+                    <div class="dropdowncontainer w-100 border-top">
+                        <div class="dropdown my-2">
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="nav-link"><i class="bi bi-person-circle shooshcolor fs-3"></i></div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow mt-1">
+                                <li><a class="dropdown-item" href="profilePage.php">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,4 +74,7 @@
         </div>
     </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
