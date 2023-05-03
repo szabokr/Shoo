@@ -8,7 +8,6 @@ $pages = array(
 	'?login' => array('file' => 'login', 'text' => 'Login'),
 	'?register' => array('file' => 'register', 'text' => 'Sign Up'),
 	'?profilePage' => array('file' => 'profilePage', 'text' => 'Profile'),
-	'?profilePage' => array('file' => 'profilePage', 'text' => 'Profile'),
 );
 
 $social=array(

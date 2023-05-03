@@ -64,8 +64,6 @@
                 </li>
             </ul>
 
-
-
             <div class="d-xl-inline-flex text-center align-items-center my-4 my-xl-0 me-xl-5">
                 <div class="nav-item mb-4 mb-xl-0 me-xl-2">
                     <a href="?login">

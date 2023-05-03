@@ -229,5 +229,9 @@
                </div>
            </div>
        </section>
+<<<<<<< HEAD
        <!-- Newsletter's End -->
    </section>
+=======
+       <!-- Newsletter's End -->
+>>>>>>> bbca7b6148bcfa209092e071a4d9ec521dfa4d20
