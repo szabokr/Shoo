@@ -39,18 +39,13 @@ class UserController
             return array("success" =>false ,"message" => "Wrong password");
         };
         // var_export(header());
-        header("Location: index.tpl.php");
-        // exit();
-        // switch ($user['permission']) {
-        //     case 1:
-        //         // header();
-        //         break;
-                
-        //         default:
-        //         var_export("iittt");
-        //         die();
-        //         break;
-        // }
-        return array("success" =>true ,"message" => "Your Login was successful!", "created_at"=> date("i"));
+        
+        return array(
+            "success" => true,
+            "message"=>"Your login was successful!",
+            "redirect" => "?seller"
+        );
+        
+        //return array("success" =>true ,"message" => "Your Login was successful!", "created_at"=> date("i"));
     }
 }

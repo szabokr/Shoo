@@ -42,7 +42,7 @@
                    <form id="contact-form" name="contact-form" action="?contact" method="POST">
                        <div class="form-outline mb-4 text-start">
                            <label class="" for="pwd"><i class="bi bi-person-fill mx-1"></i>Name</label>
-                           <input type="name" id="name" name="name" class="form-control form-control-md" placeholder="John" required />
+                           <input type="name" id="name" name="name" class="form-control form-control-md" placeholder="John"/>
                        </div>
 
                        <div class="form-outline mb-4 text-start">

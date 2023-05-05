@@ -1,4 +1,3 @@
-  <!-- Cart System's Start -->
     <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -191,4 +190,3 @@
             </div>
         </div>
     </div>
-    <!-- Cart System's End -->

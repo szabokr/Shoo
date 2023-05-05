@@ -30,6 +30,12 @@
                                              <input type="email" id="email" name="email" class="form-control form-control-md" placeholder="example@email.com" required />
                                          </div>
                                      </div>
+                                     <div class="col">
+                                         <div class="form-outline mb-4">
+                                             <label class="" for="password"><i class="bi bi-lock-at-fill mx-1"></i>Password<span class="requiredInput">*</span></label>
+                                             <input type="password" id="password" name="password" class="form-control form-control-md" placeholder="eX4mPL3pWD&" required />
+                                         </div>
+                                     </div>
                                  </div>
                                  <div class="row border-bottom pb-3">
 

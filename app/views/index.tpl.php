@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="app/views/css/register.css" />
     <link rel="stylesheet" href="app/views/css/profilePage.css" />
     <link rel="stylesheet" href="app/views/css/partners.css" />
+    <script type="text/javascript" src="../views/js/register.js"></script>
 </head>
 
 <body>
