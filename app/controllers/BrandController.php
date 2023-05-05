@@ -10,6 +10,18 @@ class BrandController
         return Brands::getBrands();
     }
 
+    public static function delete($request)
+    {
+        Brands::deleteBrand($request);
+        return array('success'=>true);
+    }
+
+    public static function create($request)
+    {
+        Brands::createBrand($request);
+        return array('success'=>true);
+    }
+
     // public static function create($request)
     // {
     //     $data=[];

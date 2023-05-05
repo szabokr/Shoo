@@ -21,4 +21,9 @@ class MessageController
         // var_export($data);        
         return "Success";
     }
+
+    public static function delete($request){
+        Message::deleteMessage($request);
+        return array("success" =>true);
+    }
 }

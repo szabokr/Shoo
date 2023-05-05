@@ -4,13 +4,20 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     if (isset($_POST['submit'])) {
         $response = UserController::login($_POST);
         if ($response["success"]) {
+            if ($response['permission']==0) {
+             
             echo '<script type="text/javascript">
-                window.location.href = "?seller";
-                </script>';
+            window.location.href = "?seller";
+            </script>';
+            }else {
+                echo '<script type="text/javascript">
+            window.location.href = "?messages";
+            </script>';
+            }
                 session_start();
                 $_SESSION["user_id"]=$response["id"];
-                var_export($_SESSION);
-                return;
+                $_SESSION["permission"]=$response["permission"];
+                $_SESSION["name"]=$response["name"];
         }
     }
 }

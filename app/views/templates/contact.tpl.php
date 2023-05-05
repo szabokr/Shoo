@@ -1,4 +1,3 @@
-   <!-- Contact Page's Start -->
    <section>
        <div class="container w-75 bg-light border border-1 rounded border-opacity-75 shadow my-5 text-muted">
            <div class="row text-center">
@@ -40,11 +39,7 @@
 
                <div class="col-12 col-lg-6 text-center my-3">
                    <form id="contact-form" name="contact-form" action="?contact" method="POST">
-                       <div class="form-outline mb-4 text-start">
-                           <label class="" for="pwd"><i class="bi bi-person-fill mx-1"></i>Name</label>
-                           <input type="name" id="name" name="name" class="form-control form-control-md" placeholder="John"/>
-                       </div>
-
+                    
                        <div class="form-outline mb-4 text-start">
                            <label class="" for="email"><i class="bi bi-envelope-at-fill mx-1"></i>Your E-mail</label>
                            <input type="email" id="email" name="email" class="form-control form-control-md mb-4" placeholder="example@email.com" required />
@@ -64,8 +59,10 @@
    <!-- Contact Page's End -->
 
    <?php
+   
     require realpath(__DIR__ . '../../../controllers/MessageController.php');
     if (isset($_POST['submit'])) {
+        ($_SESSION!=NULL) ?$_POST['name']=$_SESSION['name']:$_POST['name']="Guest";
         MessageController::create($_POST);
         // modal template hogy sikeres vagy nem sikeres a reg
 

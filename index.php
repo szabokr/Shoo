@@ -1,6 +1,5 @@
 <?php
 session_start();
-print_r($_SESSION);
 include('./config/config.inc.php');
 $url = $_SERVER['REQUEST_URI'];
 $stringArray = explode("/", $url);

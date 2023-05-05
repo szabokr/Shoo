@@ -44,7 +44,9 @@ class UserController
             "success" => true,
             "message"=>"Your login was successful!",
             "redirect" => "?seller",
-            "id"=>$user["id"]
+            "id"=>$user["id"],
+            "permission"=>$user["permission"],
+            "name"=>$user["name"]
         );
         
         //return array("success" =>true ,"message" => "Your Login was successful!", "created_at"=> date("i"));

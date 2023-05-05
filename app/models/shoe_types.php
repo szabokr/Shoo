@@ -25,6 +25,18 @@ $result = DB::query(' SELECT *
 
         return $result;
     }
+
+    public static function deleteShoe($id)
+    {
+        $sql = 'DELETE FROM ' . self::$tableName . ' WHERE id= ' . $id;
+        return DB::query($sql); 
+    }
+
+    public static function saveShoe($request)
+    {
+        $sql = 'INSERT INTO ' . self::$tableName . ' (brands_id, type, price, picture) VALUES ("' . $request['brands_id'] . '", "' . $request['type'] . '", "' . $request['price'] . '", "' . $request['picture'] . '")';
+        return DB::query($sql);
+    }
     // public static function insertUser($data)
     // {
     //     $sql="INSERT INTO " . self::$tableName . " (name, email, activate_token) VALUES (.'$data[0].', '.$data[1].', '.$data[2].')";

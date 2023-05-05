@@ -16,7 +16,13 @@ class Message
     }
     public static function insertMessage($data)
     {
-        $sql = 'INSERT INTO ' . self::$tableName . ' (name, email, message, created_at) VALUES ("'.$data[0].'", "'.$data[1].'", "'.$data[2].'", "'.$data[3].'")';
+        $sql = 'INSERT INTO ' . self::$tableName . ' (name, email, message, created_at) VALUES ("' . $data[0] . '", "' . $data[1] . '", "' . $data[2] . '", "' . $data[3] . '")';
+        return DB::query($sql);
+    }
+
+    public static function deleteMessage($id)
+    {
+        $sql = 'DELETE FROM ' . self::$tableName . ' WHERE id= ' . $id;
         return DB::query($sql);
     }
 }

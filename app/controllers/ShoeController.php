@@ -16,6 +16,17 @@ class ShoeController
         return ShoeType::getBrands();
     }
 
+    public static function delete($request)
+    {
+        ShoeType::deleteShoe($request);
+        return array("success" =>true);
+    }
+
+    public static function save($request)
+        {
+            ShoeType::saveShoe($request);
+            return array("success" =>true);
+        }
     // public static function create($request)
     // {
     //     $data=[];

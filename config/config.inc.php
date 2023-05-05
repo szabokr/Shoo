@@ -1,13 +1,18 @@
 <?php
 $pages = array(
-	'/' => array('file' => 'landingPage', 'text' => 'Home'),
-	'?seller' => array('file' => 'seller', 'text' => 'Seller'),
-	'?contact' => array('file' => 'contact', 'text' => 'Contact Us'),
-	'?partners' => array('file' => 'partners', 'text' => 'Partners'),
-	'?cartSystem' => array('file' => 'cartSystem', 'text' => 'Cart'),
-	'?login' => array('file' => 'login', 'text' => 'Login'),
-	'?register' => array('file' => 'register', 'text' => 'Sign Up'),
-	'?profilePage' => array('file' => 'profilePage', 'text' => 'Profile'),
+	'/' => array('file' => 'landingPage', 'text' => 'Home', 'visible'=>0),
+	'?seller' => array('file' => 'seller', 'text' => 'Seller', 'visible'=>0),
+	'?contact' => array('file' => 'contact', 'text' => 'Contact Us', 'visible'=>0),
+	'?partners' => array('file' => 'partners', 'text' => 'Partners', 'visible'=>0),
+	'?cartSystem' => array('file' => 'cartSystem', 'text' => 'Cart', 'visible'=>2),
+	'?login' => array('file' => 'login', 'text' => 'Login', 'visible'=>2),
+	'?logout' => array('file' => 'logout', 'text' => 'Logout', 'visible'=>2),
+	'?register' => array('file' => 'register', 'text' => 'Sign Up', 'visible'=>2),
+	'?profilePage' => array('file' => 'profilePage', 'text' => 'Profile', 'visible'=>2),
+	'?messages' => array('file' => 'messages', 'text' => 'Messages', 'visible'=>1),
+	'?orders' => array('file' => 'orders', 'text' => 'Orders', 'visible'=>1),
+	'?shoes' => array('file' => 'shoes', 'text' => 'Shoes', 'visible'=>1),
+	'?brands' => array('file' => 'brands', 'text' => 'Brands', 'visible'=>1),
 );
 
 $social=array(
