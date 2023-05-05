@@ -1,14 +1,17 @@
 <?php
 include('./app/controllers/UserController.php');
-
 if (isset($_POST['email']) && isset($_POST['password'])) {
-    try {
-        if (isset($_POST['submit'])) {
-            $response = UserController::login($_POST);
+    if (isset($_POST['submit'])) {
+        $response = UserController::login($_POST);
+        if ($response["success"]) {
+            echo '<script type="text/javascript">
+                window.location.href = "?seller";
+                </script>';
+                session_start();
+                $_SESSION["user_id"]=$response["id"];
+                var_export($_SESSION);
+                return;
         }
-    } catch (PDOException $e) {
-        include('toaster.tpl.php');
-        echo "Error: " . $e->getMessage();
     }
 }
 
@@ -44,9 +47,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                                     </div>
 
                                 </div>
-                                    <div class="d-grid gap-2">
-                                        <input type="submit" name="submit" value="Login" data-bs-toggle="modal" data-bs-target="#asdasd" class="btn btn-outline-success btn-block btn-lg gradient-custom-4" />
-                                    </div>
+                                <div class="d-grid gap-2">
+                                    <input type="submit" name="submit" value="Login" data-bs-toggle="modal" data-bs-target="#asdasd" class="btn btn-outline-success btn-block btn-lg gradient-custom-4" />
+                                </div>
 
                                 <p class="text-center text-muted mt-5 mb-5">Dont have an account? <a href="/view/register/register.html" class="fw-normal text-body"><u>Sign Up here!</u></a>
                                 </p>
@@ -62,21 +65,18 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
 
 <div class="modal fade" id="asdasd" tabindex="-1" aria-labelledby="asdasdLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="asdasdLabel">Login</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <?php 
-            $response["message"];
-        ?>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="asdasdLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Sikertelen bejelentkezés!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

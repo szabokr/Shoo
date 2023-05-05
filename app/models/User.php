@@ -28,4 +28,14 @@ class User
         }
         return $row;
     }
+
+    public static function getProfile($id)
+    {
+        $sql = 'SELECT * FROM ' . self::$tableName . ' WHERE id ="' . $id . '"';
+        $result = DB::query($sql);
+        if ($result) {
+            $row = $result->fetch_assoc();
+        }
+        return $row;
+    }
 }

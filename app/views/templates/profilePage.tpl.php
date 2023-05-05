@@ -1,4 +1,9 @@
-<!-- Profile Page's Start -->
+<?php 
+ include('./app/controllers/UserController.php');
+
+ $user = UserController::getProfile($_SESSION["user_id"]);
+var_export($user["id"]);
+?>
 <section>
   <div class="container py-5">
     <div class="row d-flex justify-content-center align-items-center">
@@ -11,7 +16,7 @@
                 <i class="bi bi-pencil-square fs-1"></i>
               </button>
             </div>
-            <h4 class="mb-2 display-6">Julie Arsenault</h4>
+            <h4 class="mb-2 display-6"><?php echo $user["name"] ?></h4>
             <!-- <p class="text-muted mb-4">@Programmer <span class="mx-2">|</span> <a href="#!">mdbootstrap.com</a></p> -->
             <div class="d-flex justify-content-between text-center mt-5 mb-2">
               <div>
@@ -42,12 +47,12 @@
               <tbody>
                 <tr>
                   <th scope="row">Full name:</th>
-                  <td class="text-end">Julie Arsenault</td>
+                  <td class="text-end"><?php echo $user["name"] ?></td>
                   <td class="text-center"><i class="bi bi-pen iconhover"></i></td>
                 </tr>
                 <tr>
                   <th scope="row">Email:</th>
-                  <td class="text-end">example@email.com</td>
+                  <td class="text-end"><?php echo $user["email"] ?></td>
                   <td class="text-center"><i class="bi bi-pen iconhover"></i></td>
                 </tr>
                 <tr>
@@ -57,7 +62,7 @@
                 </tr>
                 <tr>
                   <th scope="row">Number:</th>
-                  <td class="text-end">+01 234 5678</td>
+                  <td class="text-end"><?php echo $user["phone_number"] ?></td>
                   <td class="text-center"><i class="bi bi-pen iconhover"></i></td>
                 </tr>
                 <tr>
@@ -66,19 +71,15 @@
                 </tr>
                 <tr>
                   <th scope="row">ZIP Code:</th>
-                  <td class="text-end">1234</td>
-                </tr>
-                <tr>
-                  <th scope="row">City:</th>
-                  <td class="text-end">Manvel</td>
+                  <td class="text-end"><?php echo $user["zip_code"] ?></td>
                 </tr>
                 <tr>
                   <th scope="row">Street:</th>
-                  <td class="text-end">Main Street</td>
+                  <td class="text-end"><?php echo $user["street"] ?></td>
                 </tr>
                 <tr>
                   <th scope="row">House Number:</th>
-                  <td class="text-end">101</td>
+                  <td class="text-end"><?php echo $user["house_number"] ?></td>
                 </tr>
               </tbody>
             </table>

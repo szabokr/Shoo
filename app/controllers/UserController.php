@@ -43,9 +43,17 @@ class UserController
         return array(
             "success" => true,
             "message"=>"Your login was successful!",
-            "redirect" => "?seller"
+            "redirect" => "?seller",
+            "id"=>$user["id"]
         );
         
         //return array("success" =>true ,"message" => "Your Login was successful!", "created_at"=> date("i"));
+    }
+
+    public static function getProfile($request)
+    {
+        $user = User::getProfile($request);
+        
+        return $user;
     }
 }
