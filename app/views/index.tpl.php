@@ -17,12 +17,13 @@
     <link rel="stylesheet" href="app/views/css/register.css" />
     <link rel="stylesheet" href="app/views/css/profilePage.css" />
     <link rel="stylesheet" href="app/views/css/partners.css" />
-    <script type="text/javascript" src="../views/js/register.js"></script>
+    <link rel="stylesheet" href="app/views/css/dashboard.css" />
+    
 </head>
 
 <body>
-    <?php include('./app/views/templates/cartSystem.tpl.php') ?>
     <br><br><br>
+    <?php include('./app/views/templates/cartSystem.tpl.php') ?>
     <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary navbar-dark bg-dark fs-5" data-bs-theme="dark">
         <a class="navbar-brand ms-5" href=""><img class="shooshlogo" src="images/commonImages/logo_v2.png"></a>
         <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +31,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto ">
+            <ul class="navbar-nav me-auto">
                 <?php
                 foreach ($pages as $url => $page) {
                     if (($_SESSION != null && $_SESSION['permission'] == 0 && $page['visible'] == 0) || ($_SESSION != null && $_SESSION['permission'] == 1 && $page['visible'] == 1) || ($_SESSION == null && $page['visible'] == 0)) {

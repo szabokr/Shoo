@@ -1,8 +1,5 @@
 <?php
-// echo __DIR__ . '/../../../../../../../';
 require realpath(__DIR__ . "/../../config/database.php");
-// require 'C:\xampp\htdocs\Shoosh_html\config\database.php';
-// echo ("itt");
 
 class ShoeType
 {
@@ -37,10 +34,5 @@ $result = DB::query(' SELECT *
         $sql = 'INSERT INTO ' . self::$tableName . ' (brands_id, type, price, picture) VALUES ("' . $request['brands_id'] . '", "' . $request['type'] . '", "' . $request['price'] . '", "' . $request['picture'] . '")';
         return DB::query($sql);
     }
-    // public static function insertUser($data)
-    // {
-    //     $sql="INSERT INTO " . self::$tableName . " (name, email, activate_token) VALUES (.'$data[0].', '.$data[1].', '.$data[2].')";
-    //     var_export($sql);
-    //     return query($sql);
-    // }
+   
 }

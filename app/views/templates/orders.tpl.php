@@ -1,6 +1,6 @@
 <?php
-include('./app/controllers/MessageController.php');
-$messages = MessageController::list();
+include('./app/controllers/OrderController.php');
+$orders = OrderController::listOrders();
 ?>
 
 <div class="container bg-light mt-5">
@@ -9,7 +9,7 @@ $messages = MessageController::list();
             <div class="row border-bottom align-items-center">
                 <div class="col-12 d-flex justify-content-start footeropacity">
                     <i class="bi bi-database-add ms-1 dashboardIconSize"></i>
-                    <h1 class="ms-2 display-5 text-uppercase">Messages</h1>
+                    <h1 class="ms-2 display-5 text-uppercase">Orders</h1>
 
                 </div>
             </div>
@@ -18,9 +18,10 @@ $messages = MessageController::list();
 
             $headers = array(
                 "Action",
-                "Name",
+                "Order ID",
+                "Shoe ID",
+                "User ID",
                 "Email",
-                "Message",
                 "Created At",
             );
             echo '<div class="row mx-1">';
@@ -33,23 +34,24 @@ $messages = MessageController::list();
             echo '</tr>';
             echo '</thead>';
             echo '<tbody class="footeropacity">';
-            foreach ($messages as $message) {
+            foreach ($orders as $order) {
                 echo '<tr>';
                 echo '
             <th scope="row" class="text-center">
                 <form action="" method="post">
-                    <input type="hidden" name="messageId" value="' . $message['id'] . '">
-                        <button type="submit" name="deleteMessage" class="btn btn-danger ms-1 delete-button">
+                    <input type="hidden" name="orderId" value="' . $order['id'] . '">
+                        <button type="submit" name="deleteOrder" class="btn btn-danger ms-1 delete-button">
                             <i class="bi bi-trash3"></i>
                         </button>
                 </form>
         </div>
             </th>';
                 echo '
-    <td class="text-center">' . $message["name"] . '</td>
-    <td class="text-center">' . $message["email"] . '</td>
-    <td class="">' . $message["message"] . '</td>
-    <td class="text-center">' . $message["created_at"] . '</td>
+    <td class="text-center">' . $order["id"] . '</td>
+    <td class="text-center">' . $order["shoe_id"] . '</td>
+    <td class="">' . $order["user_id"] . '</td>
+    <td class="text-center">' . $order["email"] . '</td>
+    <td class="text-center">' . $order["created_at"] . '</td>
     ';
                 echo '</tr>';
             }
@@ -83,13 +85,11 @@ $messages = MessageController::list();
 
 
             <?php
-            if (isset($_POST['messageId'])) {
-                $messageId = $_POST['messageId'];
-                $response = Message::deleteMessage($messageId);
+            if (isset($_POST['orderId'])) {
+                $orderId= $_POST['orderId'];
+                $response = Orders::deleteOrder($orderId);
             }
             ?>
-
-
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
             </script>

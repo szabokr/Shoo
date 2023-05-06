@@ -1,5 +1,4 @@
- <!-- Register Page's Start -->
- <section class="bg-image bg-head">
+<section class="bg-image bg-head">
      <div class="mask d-flex align-items-center gradient-custom-3 py-5">
          <div class="container">
              <div class="row d-flex justify-content-center align-items-center">
@@ -8,7 +7,7 @@
                          <div class="card-body p-5">
                              <h2 class="text-uppercase text-center mb-5 display-6 text-muted">Create an account</h2>
 
-                             <form action="?register" method="POST">
+                             <form action="?register" method="POST" onsubmit="return check();">
                                  <div class="row">
                                      <div class="col">
                                          <div class="form-outline mb-4">

@@ -1,3 +1,8 @@
+window.onload = function() {
+	var send = document.getElementById("send");
+	if (send)
+		send.disabled = true;
+};
 function check() {
 	var correct = true;
 	var focus = null;

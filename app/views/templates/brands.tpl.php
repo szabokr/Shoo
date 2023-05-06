@@ -4,18 +4,18 @@ $brands = Brands::getBrands();
 ?>
 
 <!-- <div class="p-0"> -->
-<div class="container bg-light">
+<div class="container bg-light mt-5">
 
     <div class="row">
         <div class="col-12 border border-1 rounded border-opacity-75 shadow">
             <div class="row border-bottom align-items-center">
                 <div class="col-9 d-flex justify-content-start footeropacity">
                     <i class="bi bi-database-add ms-1 dashboardIconSize"></i>
-                    <h1 class="ms-2 display-5">SZAR</h1>
+                    <h1 class="ms-2 display-5 text-uppercase">Brands</h1>
 
                 </div>
                 <div class="col-3 text-end">
-                    <button class="btn btn-success btn-md me-1 dashboardAdd shadow" data-bs-toggle="modal" data-bs-target="#addModal">
+                    <button class="btn btn-success btn-md me-1 dashboardAdd shadow" data-bs-toggle="modal" data-bs-target="#brandAddModal">
                         <i class="bi bi-plus-lg"></i>
                     </button>
                 </div>
@@ -23,12 +23,12 @@ $brands = Brands::getBrands();
 
 
             <!-- Modal -->
-            <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="brandAddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <form action="" method="POST">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add new Brand</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
