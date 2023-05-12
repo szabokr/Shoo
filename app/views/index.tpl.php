@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="app/views/css/profilePage.css" />
     <link rel="stylesheet" href="app/views/css/partners.css" />
     <link rel="stylesheet" href="app/views/css/dashboard.css" />
-    
+    <script type="text/javascript" src="app/views/js/register.js"></script>
+
 </head>
 
 <body>
@@ -206,5 +207,4 @@
     <?php }
     ?>
 </body>
-
 </html>
