@@ -23,7 +23,7 @@ function check() {
 
 	var name = document.getElementById("lastName");
     if (name) {
-        if (name.value.length < 5) {
+        if (name.value.length < 3) {
             correct = false;
             name.style.background = '#f99';
             focus = name;
@@ -34,7 +34,7 @@ function check() {
 
     var name = document.getElementById("firstName");
     if (name) {
-        if (name.value.length < 5) {
+        if (name.value.length < 3) {
             correct = false;
             name.style.background = '#f99';
             focus = name;

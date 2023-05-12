@@ -14,7 +14,7 @@
                        <h5 class="display-6 text-light text-uppercase fw-bold">join our team!</h5>
                        <p class="text-uppercase fs-6 fw-light">
                            be part of a growing communiy!</p>
-                       <button class="btn btn-outline-light btn-md fw-bold text-uppercase" type="submit">Register</button>
+                       <a href="?register"><button class="btn btn-outline-light btn-md fw-bold text-uppercase" type="submit">Register</button></a>
                    </div>
                </div>
                <div class="carousel-item" data-bs-interval="5000">
@@ -23,16 +23,16 @@
                        <h5 class="display-6 text-light text-uppercase fw-bold">find our best offers!</h5>
                        <p class="text-uppercase fs-6 fw-light">
                            find your favorite brands and shoes!</p>
-                       <button class="btn btn-outline-light btn-md fw-bold text-uppercase" type="submit">Offers</button>
+                       <a href="?seller"><button class="btn btn-outline-light btn-md fw-bold text-uppercase" type="submit">Offers</button></a>
                    </div>
                </div>
                <div class="carousel-item" data-bs-interval="5000">
                    <img src="images/commonImages/shoewall.jpg" class="img-fluid landingPageCarousel" alt="...">
                    <div class="carousel-caption fs-5">
-                       <h5 class="display-6 text-dark text-uppercase fw-bold">subscribe to our newsletter</h5>
+                       <h5 class="display-6 text-dark text-uppercase fw-bold">Contact Us!</h5>
                        <p class="text-uppercase fs-6 text-dark fw-bold">
-                           get special offers and sales!</p>
-                       <button class="btn btn-outline-dark btn-md fw-bold text-uppercase" type="submit">subscribe</button>
+                           write us your thoughts!</p>
+                       <a href="?contact"><button class="btn btn-outline-dark btn-md fw-bold text-uppercase" type="submit">Contact</button></a>
                    </div>
                </div>
            </div>
@@ -229,9 +229,4 @@
                </div>
            </div>
        </section>
-<<<<<<< HEAD
        <!-- Newsletter's End -->
-   </section>
-=======
-       <!-- Newsletter's End -->
->>>>>>> bbca7b6148bcfa209092e071a4d9ec521dfa4d20

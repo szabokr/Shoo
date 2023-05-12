@@ -12,7 +12,7 @@
                                 <div class="row">
                                     <label class="form-label">Brand</label>
                                     <select id="brand_id" name="brand_id"  class="form-select" aria-label="Default select example">
-                                        <option selected>Select</option>
+                                        <option selected>Select!</option>
                                         <?php
                                         include('../../controllers/ShoeController.php');
                                         $brands = ShoeController::listBrands();
@@ -26,12 +26,12 @@
 
                                 <div class="row">
                                     <label class="form-label">Type</label>
-                                    <input id="type" name="type" type="text" class="form-control"  placeholder="name@example.com">
+                                    <input id="type" name="type" type="text" class="form-control"  placeholder="Example Type">
                                 </div>
 
                                 <div class="row">
                                     <label for="" class="form-label">Price</label>
-                                    <input id="price" name="price" type="text" class="form-control" placeholder="name@example.com">
+                                    <input id="price" name="price" type="text" class="form-control" placeholder="$XXX">
                                 </div>
 
                                 <div class="row">
